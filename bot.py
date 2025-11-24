@@ -84,7 +84,7 @@ class BasicBot:
             logger.error(f"API Exception in place_market_order: {e.status_code} - {e.message}")
             raise
         except BinanceOrderException as e:
-            logger.error(f"Order Exception in place_market_order: {e.status_code} - {e.message}")
+            logger.error(f"Order Exception in place_market_order: {str(e)}")
             raise
         except Exception as e:
             logger.error(f"Error in place_market_order: {str(e)}")
@@ -124,7 +124,7 @@ class BasicBot:
             logger.error(f"API Exception in place_limit_order: {e.status_code} - {e.message}")
             raise
         except BinanceOrderException as e:
-            logger.error(f"Order Exception in place_limit_order: {e.status_code} - {e.message}")
+            logger.error(f"Order Exception in place_limit_order: {str(e)}")
             raise
         except Exception as e:
             logger.error(f"Error in place_limit_order: {str(e)}")
@@ -166,7 +166,7 @@ class BasicBot:
             logger.error(f"API Exception in place_stop_limit_order: {e.status_code} - {e.message}")
             raise
         except BinanceOrderException as e:
-            logger.error(f"Order Exception in place_stop_limit_order: {e.status_code} - {e.message}")
+            logger.error(f"Order Exception in place_stop_limit_order: {str(e)}")
             raise
         except Exception as e:
             logger.error(f"Error in place_stop_limit_order: {str(e)}")
